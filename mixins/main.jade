@@ -1,0 +1,47 @@
+include /addons/lfa-exercises/mixins/main
+include /addons/lfa-backstage/mixins/main
+
+mixin video(url, args)
+  - args = args || [];
+  - var m4v = url
+  - var ogv = url.replace(".m4v",".ogv")
+  - var webm = url.replace(".m4v",".webm")
+  - var v = {};
+  - for (var i = 0, len = args.length; i < len; i++) {
+  -   v[args[i]] = true;
+  - }
+  video.video(controls=v['controls'], autoplay=v['autoplay'], loop=v['loop'])
+    source(src=m4v, type="video/mp4")
+    source(src=webm, type="video/webm")
+    source(src=ogv, type="video/ogg")
+
+mixin audio-sync(audio,nocontrols)
+  .audio-sync
+    -var audiomp3 = audio
+    -var audioogg = audio.replace(".mp3",".ogg")
+    if audio
+      block
+      if nocontrols
+        audio
+          source(src=audiomp3)
+          source(src=audioogg)
+      else
+        audio(controls)
+          source(src=audiomp3)
+          source(src=audioogg)
+
+    else
+      p Lipsește audio, nu afișez nici textul!
+
+
+mixin segment
+  .segment
+    a.textaloud(href="#", onClick="javascript: return false;")
+      block
+
+mixin error-message()
+  .container-fluid(style='background-color: white;')
+    .text-center(style="margin-top: 4em;")
+      img(src='img/avatar/kat-wondering.gif', style="width: 90px; margin: 0 auto;")
+      h3.red Manualul se încarcă. 
+      p.small-text Dacă apar probleme vă rugăm să reîncărcați pagina.

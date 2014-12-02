@@ -1,3 +1,35 @@
-+article("מנושא לחיפוש פשוט")
-  +section("בניית שאילתת חיפוש ")
-    h1 1.2. בניית שאילתת חיפוש 
++article("1.2.  בניית שאילתת חיפוש")
+  +section("1.2.  בניית שאילתת חיפוש")
+    h1 1.2.	בניית שאילתת חיפוש 
+    p.justify
+      strong Lorem ipsum 
+      | dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+    <a href="http://goanimate.com/videos/0aNmPXLXmDxA?utm_source=embed" target="_blank">בניית שאילתת חיפוש</a> by <a href="http://goanimate.com/user/0NISa-1Bzeag" target="_blank">Openu</a> on <a href='http://goanimate.com?utm_source=embed' target="_blank">GoAnimate</a><br /><iframe    scrolling="no"    allowTransparency="true"    frameborder="0"    width="400" height="225"    src="http://goanimate.com/player/embed/0aNmPXLXmDxA?utm_source=social&utm_medium=tumblr&utm_campaign=usercontent"></iframe>
+
+    +exercise({name: 'help06-1'})
+      .progress-box
+      .score-box
+      .is-done-box
+
+      b Order the numbers from the lowest to the highest:
+      +drag-and-sort({name: 'help06-1-1', scoreByRelativeOrder: true})
+
+        span.item(data-index=50) 50
+        span.item(data-index=40) 40
+        span.item(data-index=30) 30
+        span.item(data-index=20) 20
+        span.item(data-index=10) 10
+        .score-box
+
+      .clearfix
+      br
+      b Sort the planets from nearest to furthest from the Sun:
+      +drag-and-sort({name: 'help06-1-2'})
+        ul.items
+          li.item(data-index='7') Saturn
+          li.item(data-index='2') Venus
+          li.item(data-index='8') Uranus
+          li.item(data-index='4') Mars
+          li.item(data-index='9') Neptune
+          li.item(data-index='3') Earth
+          li.item(data-index='1') Mercury
