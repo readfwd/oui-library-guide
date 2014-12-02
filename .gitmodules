@@ -1,0 +1,6 @@
+[submodule "addons/lfa-backstage"]
+	path = addons/lfa-backstage
+	url = git@github.com:learnfwd/lfa-addon-backstage.git
+[submodule "addons/lfa-exercises"]
+	path = addons/lfa-exercises
+	url = git@github.com:learnfwd/lfa-addon-exercises.git
