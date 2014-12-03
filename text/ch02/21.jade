@@ -2,9 +2,47 @@
   +section("2.1. מקורות מידע אלקטרוניים")
     p 2.1.1. קטלוג ספריית האו"פ
     +youtube("FvGWh3od3Fw")
+    +exercise({name: 'ex03'})
+      .progress-box
+
+      +pickone(3, ['two or three', '+/- 5 or so', 'around 15'], {name: 'ex02-po011', placement: 'top'})
+        .block
+          p 1. How many exercise types are there in Learn Forward?
+
+      +yesno({name: 'ex02-yn012', answer: false})
+        p 2. After the student solves an exercise, the result needs to be manually saved
     p 2.1.2. מאגרי מכון סאלד
     +youtube("8eY6Atlmwy8")
+    +exercise({name: 'help05-2'})
+      .progress-box
+      .score-box
+      .is-done-box
+
+      +textline({name: "help05-1-1", type: 'text', max: 40,
+        title: "ex. Tiberius Kirk",
+        regexp: /^\w+\s+\w+/,
+        pattern: /^\w+\s+\w+$/,
+        placeholder: 'Firstname Lastname',
+        })
+        b Enter your first name and last name: &nbsp;
+          .input
     p 2.1.3. PROQUEST מאגרים בינלאומיים
     +youtube("ItwFS0d1irQ")
+    .aside-box
+      +select-to-highlight({
+          name: 'help02-2',
+          irritationLevel: 5,
+          ignoreAvatar: false
+        })
+        p Select the odd numbers and the vowels below. Avoid consonants and even numbers!
+        .progress-box
+        .btn.btn-lg.bad 2
+        .btn.btn-lg.good A
+        .btn.btn-lg.bad H
+        .btn.btn-lg.good 7
+        .btn.btn-lg.good 3
+        .btn.btn-lg.bad C
+        .btn.btn-lg.bad 8
+        .btn.btn-lg.good E
     p 2.1.4. מפתח חיפה למאמרים בעברית
     a(href='https://sso.apps.openu.ac.il/EZlogin?T_PLACE=http://www.openu.ac.il/library/ebscoRedirect4.html?url=aHR0cDovL3ByaW1vZmUuaGFpZmEuYWMuaWwvcHJpbW9fbGlicmFyeS9saWJ3ZWIvc3RhdGljX2h0bWxzL2locF9oZWxwLmh0bWw%3D') Visit The Open University of Israel

@@ -1,2 +1,3 @@
 book_title: "LearnFwd Textbook"
-text_direction: "rtl"
+text_direction: 'rtl'
+book_id: "OUI Library"

@@ -5,3 +5,26 @@
     p.justify Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. 
     p.justify Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
     +youtube("5ghLUwxCySg")
+    h3.text-uppercase תרגילים (Exercises)
+    p 1. Sort the planets from nearest to furthest from the Sun:
+      +drag-and-sort({name: 'help06-1-2'})
+        ul.items
+          li.item(data-index='7') Saturn
+          li.item(data-index='2') Venus
+          li.item(data-index='8') Uranus
+          li.item(data-index='4') Mars
+          li.item(data-index='9') Neptune
+          li.item(data-index='3') Earth
+          li.item(data-index='1') Mercury
+    +exercise({name: 'ex02'})
+      .progress-box
+
+      +pickone(3, ['two or three', '+/- 5 or so', 'around 15'], {name: 'ex02po01', placement: 'top'})
+        .block
+          p 2. How many exercise types are there in Learn Forward?
+
+      +yesno({name: 'ex02yn01', answer: false})
+        p 3. After the student solves an exercise, the result needs to be manually saved
+
+      +yesno({name: 'ex02yn02', answer: true})
+        p 4. Usually exercises offer instant feedback that shows if you make progress or not

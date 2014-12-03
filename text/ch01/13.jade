@@ -7,8 +7,106 @@
       .col-sm-6
         p.justify Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     <a href="http://goanimate.com/videos/0aNmPXLXmDxA?utm_source=embed" target="_blank">בניית שאילתת חיפוש</a> by <a href="http://goanimate.com/user/0NISa-1Bzeag" target="_blank">Openu</a> on <a href='http://goanimate.com?utm_source=embed' target="_blank">GoAnimate</a><br /><iframe    scrolling="no"    allowTransparency="true"    frameborder="0"    width="400" height="225"    src="http://goanimate.com/player/embed/0aNmPXLXmDxA?utm_source=social&utm_medium=tumblr&utm_campaign=usercontent"></iframe>
-    .row
-      .col-sm-6 
-        p.justify Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      .col-sm-6
-        p.justify Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h3.text-uppercase תרגילים (Exercises)
+    +exercise({name: 'help03-1'})
+
+      .row
+        .col-xs-10
+          .progress-box
+        .col-xs-1
+          .is-done-box
+        .col-xs-1
+          .score-box
+      +yesno({answer: false, name:'help03-1-1', yes: 'Yes', no: 'No'})
+        p 1. Has man landed on Mars, yet? (year is 2014 :) )
+
+      +yesno({answer: true, name:'help03-1-1', yes: 'True', no: 'False'})
+        p 2. Tomatoes are actually fruits.
+
+      +yesno({answer: false, name:'help03-1-1', yes: 'recieve', no: 'receive'})
+        p 3. How is this word written?
+    +exercise({name: 'help05-1'})
+      .progress-box
+      .score-box
+      .is-done-box
+
+      +textline({name: "help05-1-1", type: 'text', max: 40,
+        title: "ex. Tiberius Kirk",
+        regexp: /^\w+\s+\w+/,
+        pattern: /^\w+\s+\w+$/,
+        placeholder: 'Firstname Lastname',
+        })
+        p 4. Enter your first name and last name: &nbsp;
+          .input
+
+      +textline({name: "help05-1-2", type: 'tel', max: 16,
+        title: "fill in with digits",
+        regexp: /^\+\d{8,16}$/,
+        pattern: /^\+\d{8,16}$/,
+        placeholder: '+44...',
+        })
+        p 5. Please enter your phone number (include +prefix): &nbsp;
+          .input
+
+      .clearfix
+      +textline({name: "help05-1-3", type: 'multiline', max: 5000,
+        title: "Îndrăznește!",
+        regexp: /^[^.]{10,}\./,
+        rows: 7,
+        placeholder: '',
+        })
+        | 6. Write any sentence here. Finish it with period.
+    p.justify Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    +crosswords({
+        name: 'help11-1',
+        hideNumbers: false,
+        ignoreAvatar: false,
+        words: //  1  2  3  4  5  6  7  8  9  0  1  2
+               ['  _  _  _  _  _ 1N  _2>K  _  _  _  _',  //  1
+                '  _  _  _  _ 3P >A  M  U  K  _  _  _',  //  2
+                '  _  _  _  _  _  U  _  N  _  _  _  _',  //  3
+                '  _  _  _  _  _  M  _  D  _  _  _  _',  //  4
+                '  _  _  _  _  _  _  _  E  _  _  _  _',  //  5
+                '  _  _  _  _  _  _  _  R  _  _  _  _',  //  6
+                '  _  _  _  _4>M  U  R  A  K  A  M  I',  //  7
+                '  _  _  _  _  E  _  _  _  _  _  _  _',  //  8
+                '  _  _ 5S  A >L  I  N  G  E  R  _  _',  //  9
+                '  _  _  _  _  V  _  _  _  _  _  _  _',  //  10
+                '  _  _ 6A  S  I  M  O  V  _ 7C  _  _',  //  11
+                '  _  _  _  _  L  _  _  _  _  L  _  _',  //  12
+                ' 8G  O  G  O  L  _  _  _  _  A  _  _',  //  13
+                '  _  _  _  _9>E  X  U  P  E  R  Y  _',  //  14
+                '  _  _  _  _  _  _  _  _  _  K  _  _',  //  15
+                '  _  _  _  _  _  _  _  _  _  E  _  _']  //  16
+      })
+      .progress-box
+      .score-box
+      .row
+        .col-md-8
+          .xwordscontent
+          .clearfix
+        .col-md-4.well.sans
+          strong Writer Names Puzzle
+          br
+          span Definitions
+
+          .row
+            .col-xs-12
+              pre.
+                Across:
+
+                3. Orhan ...
+                4. Haruki ...
+                5. J.D. ...
+                6. Isac ...
+                8. N.V. ...
+                9. Antoine de Saint-....
+            .col-xs-12
+              pre.
+                Down:
+                1. Gellu ...
+                2. Milan ...
+                4. Herman ...
+                7. Arthur C. ....
+
+    
