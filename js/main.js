@@ -5,26 +5,26 @@ define([
 ], function(Exercises, Backstage, _) {
   window.Exercises = Exercises;
   window.firstTimeDoneMessages = [
-    'Bravo!',
-    'Felicitări!',
-    'Excelent!',
-    'Corect!',
-    'Super!',
-    'Impecabil!',
-    'Grozav!'
+     "בראבו!",
+     "מזל טוב!",
+     "מצוין!",
+     "נכון!",
+     "סופר!",
+     "מרשים!",
+     "מושלם!"
   ];
 
-  var greetings = ['Bun venit!', 'Salut!', 'Salutări!', 'Bună!', 'Ce faci?'];
+  var greetings = ["ברוכים הבאים!", "היי!", "יום טוב! ',' אהלן!", "מה קורה?"];
 
   var hh = (new Date()).getHours();
 
   if (hh >= 2 && hh < 12) {
-    greetings.push('Bună dimineața!');
+    greetings.push('Good morning!');
   }
-  else if (hh > 5 || hh < 2) {
-    greetings.push('Bună seara!');
+  else if (hh > 17 || hh < 2) {
+    greetings.push('Good evening!!');
   } else {
-    greetings.push('Bună ziua!');
+    greetings.push('Hello!');
   }
 
   var useCounter = window.App.storage.getItem('useCounter') || 0;
@@ -75,20 +75,20 @@ define([
         audio.pause();
     });
 
-    $(window).on('resize', _.throttle(function() {
-      if (current_popover) {
-        current_popover.popover('destroy');
-        current_popover = null;
-      }
-    }, 1000));
+//     $(window).on('resize', _.throttle(function() {
+//       if (current_popover) {
+//         current_popover.popover('destroy');
+//         current_popover = null;
+//       }
+//     }, 1000));
 
-    $(document).mouseup(function(e) {
-      if (current_popover == null) return;
-      if (!current_popover.is(e.target) && current_popover.has(e.target).length === 0) {
-        current_popover.popover('destroy');
-        current_popover = null;
-      }
-    });
+//     $(document).mouseup(function(e) {
+//       if (current_popover == null) return;
+//       if (!current_popover.is(e.target) && current_popover.has(e.target).length === 0) {
+//         current_popover.popover('destroy');
+//         current_popover = null;
+//       }
+//     });
 
   });
 });

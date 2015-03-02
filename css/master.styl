@@ -6,9 +6,16 @@ lfa-framework()
 @import '_exercises'
 
 .center
-  @extend .text-center
-.justify
-  @extend .text-justify
-.right
-  @extend .text-right
+  @extends .text-center
 
+.justify
+  @extends .text-justify
+
+.right
+  @extends .text-right
+
+html[dir='rtl'] 
+  .progress-bar
+    float: right
+  .item
+    float: right
